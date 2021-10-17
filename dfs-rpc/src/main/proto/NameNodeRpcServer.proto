@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.shawnliang.github.dfs.namenode.rpc;
+
+option java_multiple_files = true;
+option java_package = "com.shawnliang.github.dfs.namenode.rpc.service";
+option java_outer_classname = "NameNodeServer";
+
+import "NameNodeRpcModel.proto";
+
+service NameNodeService {
+    rpc register(RegisterRequest) returns (RegisterResponse);
+	  rpc heartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+}

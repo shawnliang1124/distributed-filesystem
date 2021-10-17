@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.shawnliang.github.dfs.namenode.rpc;
+
+option java_multiple_files = true;
+option java_package = "com.shawnliang.github.dfs.namenode.rpc.model";
+option java_outer_classname = "NameNodeRpcModel";
+
+message RegisterRequest{
+    string ip  = 1;
+    string hostname  = 2;
+}
+message RegisterResponse{
+    int32 status  = 1;
+}
+message HeartbeatRequest{
+    string ip  = 1;
+    string hostname  = 2;
+}
+message HeartbeatResponse{
+    int32 status  = 1;
+}
