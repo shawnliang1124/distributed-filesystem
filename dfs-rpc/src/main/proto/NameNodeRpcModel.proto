@@ -20,3 +20,10 @@ message HeartbeatRequest{
 message HeartbeatResponse{
     int32 status  = 1;
 }
+
+message MkdirRequest{
+    string path  = 1;
+}
+message MkdirResponse{
+    int32 status  = 1;
+}

@@ -9,7 +9,7 @@ package com.shawnliang.github.dfs.namenode.rpc.model;
 public  final class HeartbeatResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.shawnliang.github.dfs.namenode.rpc.HeartbeatResponse)
-    HeartbeatResponseOrBuilder {
+        HeartbeatResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use HeartbeatResponse.newBuilder() to construct.
   private HeartbeatResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
       internalGetFieldAccessorTable() {
     return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            HeartbeatResponse.class, Builder.class);
+            HeartbeatResponse.class, HeartbeatResponse.Builder.class);
   }
 
   public static final int STATUS_FIELD_NUMBER = 1;
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.shawnliang.github.dfs.namenode.rpc.HeartbeatResponse)
-      HeartbeatResponseOrBuilder {
+          HeartbeatResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatResponse_descriptor;
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
         internalGetFieldAccessorTable() {
       return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              HeartbeatResponse.class, Builder.class);
+              HeartbeatResponse.class, HeartbeatResponse.Builder.class);
     }
 
     // Construct using com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse.newBuilder()

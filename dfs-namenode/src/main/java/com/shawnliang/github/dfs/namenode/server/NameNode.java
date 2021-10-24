@@ -1,5 +1,7 @@
 package com.shawnliang.github.dfs.namenode.server;
 
+import java.io.IOException;
+
 /**
  * Description :   .
  *
@@ -40,7 +42,11 @@ public class NameNode {
         this.nameSystem = new FSNameSystem();
         this.dataNodeManager = new DataNodeManager();
         this.rpcServer = new NameNodeRpcServer(this.nameSystem, this.dataNodeManager);
-        this.rpcServer.start();
+        try {
+            this.rpcServer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

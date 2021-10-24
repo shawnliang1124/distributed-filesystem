@@ -2,6 +2,8 @@ package com.shawnliang.github.dfs.namenode.server;
 
 import com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest;
 import com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse;
+import com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest;
+import com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse;
 import com.shawnliang.github.dfs.namenode.rpc.model.RegisterRequest;
 import com.shawnliang.github.dfs.namenode.rpc.model.RegisterResponse;
 import com.shawnliang.github.dfs.namenode.rpc.service.NameNodeServiceGrpc;
@@ -34,16 +36,22 @@ public class NameNodeServiceImpl extends NameNodeServiceGrpc.NameNodeServiceImpl
     }
 
 
-    /**
-     * 创建目录
-     * @param path 目录路径
-     * @return 是否创建成功
-     * @throws Exception
-     */
-    public Boolean mkdir(String path) throws Exception {
-        return this.fsNameSystem.mkdir(path);
-    }
+    @Override
+    public void mkdir(MkdirRequest request, StreamObserver<MkdirResponse> responseObserver) {
+        try {
+            fsNameSystem.mkdir(request.getPath());
+            System.out.println("创建目录 path" +  request.getPath());
 
+            MkdirResponse response = MkdirResponse.newBuilder()
+                    .setStatus(STATUS_SUCCESS)
+                    .build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void register(RegisterRequest request,

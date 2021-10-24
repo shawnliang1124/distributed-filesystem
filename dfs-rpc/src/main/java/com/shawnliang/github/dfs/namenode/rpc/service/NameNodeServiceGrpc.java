@@ -1,18 +1,10 @@
 package com.shawnliang.github.dfs.namenode.rpc.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -28,7 +20,7 @@ public final class NameNodeServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getRegisterMethod()} instead. 
+  @Deprecated // Use {@link #getRegisterMethod()} instead.
   public static final io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.RegisterRequest,
       com.shawnliang.github.dfs.namenode.rpc.model.RegisterResponse> METHOD_REGISTER = getRegisterMethod();
 
@@ -42,7 +34,7 @@ public final class NameNodeServiceGrpc {
     if ((getRegisterMethod = NameNodeServiceGrpc.getRegisterMethod) == null) {
       synchronized (NameNodeServiceGrpc.class) {
         if ((getRegisterMethod = NameNodeServiceGrpc.getRegisterMethod) == null) {
-          NameNodeServiceGrpc.getRegisterMethod = getRegisterMethod = 
+          NameNodeServiceGrpc.getRegisterMethod = getRegisterMethod =
               io.grpc.MethodDescriptor.<com.shawnliang.github.dfs.namenode.rpc.model.RegisterRequest, com.shawnliang.github.dfs.namenode.rpc.model.RegisterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -60,7 +52,7 @@ public final class NameNodeServiceGrpc {
      return getRegisterMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getHeartbeatMethod()} instead. 
+  @Deprecated // Use {@link #getHeartbeatMethod()} instead.
   public static final io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest,
       com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse> METHOD_HEARTBEAT = getHeartbeatMethod();
 
@@ -74,7 +66,7 @@ public final class NameNodeServiceGrpc {
     if ((getHeartbeatMethod = NameNodeServiceGrpc.getHeartbeatMethod) == null) {
       synchronized (NameNodeServiceGrpc.class) {
         if ((getHeartbeatMethod = NameNodeServiceGrpc.getHeartbeatMethod) == null) {
-          NameNodeServiceGrpc.getHeartbeatMethod = getHeartbeatMethod = 
+          NameNodeServiceGrpc.getHeartbeatMethod = getHeartbeatMethod =
               io.grpc.MethodDescriptor.<com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest, com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -90,6 +82,38 @@ public final class NameNodeServiceGrpc {
         }
      }
      return getHeartbeatMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @Deprecated // Use {@link #getMkdirMethod()} instead.
+  public static final io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest,
+      com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> METHOD_MKDIR = getMkdirMethod();
+
+  private static volatile io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest,
+      com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> getMkdirMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest,
+      com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> getMkdirMethod() {
+    io.grpc.MethodDescriptor<com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest, com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> getMkdirMethod;
+    if ((getMkdirMethod = NameNodeServiceGrpc.getMkdirMethod) == null) {
+      synchronized (NameNodeServiceGrpc.class) {
+        if ((getMkdirMethod = NameNodeServiceGrpc.getMkdirMethod) == null) {
+          NameNodeServiceGrpc.getMkdirMethod = getMkdirMethod =
+              io.grpc.MethodDescriptor.<com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest, com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "com.shawnliang.github.dfs.namenode.rpc.NameNodeService", "mkdir"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new NameNodeServiceMethodDescriptorSupplier("mkdir"))
+                  .build();
+          }
+        }
+     }
+     return getMkdirMethod;
   }
 
   /**
@@ -133,7 +157,14 @@ public final class NameNodeServiceGrpc {
       asyncUnimplementedUnaryCall(getHeartbeatMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    /**
+     */
+    public void mkdir(com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest request,
+        io.grpc.stub.StreamObserver<com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getMkdirMethod(), responseObserver);
+    }
+
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRegisterMethod(),
@@ -149,6 +180,13 @@ public final class NameNodeServiceGrpc {
                 com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest,
                 com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse>(
                   this, METHODID_HEARTBEAT)))
+          .addMethod(
+            getMkdirMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest,
+                com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse>(
+                  this, METHODID_MKDIR)))
           .build();
     }
   }
@@ -165,7 +203,7 @@ public final class NameNodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected NameNodeServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new NameNodeServiceStub(channel, callOptions);
@@ -186,6 +224,14 @@ public final class NameNodeServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getHeartbeatMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void mkdir(com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest request,
+        io.grpc.stub.StreamObserver<com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMkdirMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -200,7 +246,7 @@ public final class NameNodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected NameNodeServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new NameNodeServiceBlockingStub(channel, callOptions);
@@ -219,6 +265,13 @@ public final class NameNodeServiceGrpc {
       return blockingUnaryCall(
           getChannel(), getHeartbeatMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse mkdir(com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getMkdirMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -233,7 +286,7 @@ public final class NameNodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected NameNodeServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new NameNodeServiceFutureStub(channel, callOptions);
@@ -254,10 +307,19 @@ public final class NameNodeServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getHeartbeatMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse> mkdir(
+        com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMkdirMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER = 0;
   private static final int METHODID_HEARTBEAT = 1;
+  private static final int METHODID_MKDIR = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -272,8 +334,8 @@ public final class NameNodeServiceGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_REGISTER:
@@ -284,13 +346,17 @@ public final class NameNodeServiceGrpc {
           serviceImpl.heartbeat((com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest) request,
               (io.grpc.stub.StreamObserver<com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatResponse>) responseObserver);
           break;
+        case METHODID_MKDIR:
+          serviceImpl.mkdir((com.shawnliang.github.dfs.namenode.rpc.model.MkdirRequest) request,
+              (io.grpc.stub.StreamObserver<com.shawnliang.github.dfs.namenode.rpc.model.MkdirResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -304,12 +370,12 @@ public final class NameNodeServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     NameNodeServiceBaseDescriptorSupplier() {}
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.shawnliang.github.dfs.namenode.rpc.service.NameNodeServer.getDescriptor();
+      return NameNodeServer.getDescriptor();
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("NameNodeService");
     }
@@ -329,7 +395,7 @@ public final class NameNodeServiceGrpc {
       this.methodName = methodName;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
@@ -347,6 +413,7 @@ public final class NameNodeServiceGrpc {
               .setSchemaDescriptor(new NameNodeServiceFileDescriptorSupplier())
               .addMethod(getRegisterMethod())
               .addMethod(getHeartbeatMethod())
+              .addMethod(getMkdirMethod())
               .build();
         }
       }

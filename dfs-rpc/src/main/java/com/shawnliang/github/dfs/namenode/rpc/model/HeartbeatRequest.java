@@ -9,7 +9,7 @@ package com.shawnliang.github.dfs.namenode.rpc.model;
 public  final class HeartbeatRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.shawnliang.github.dfs.namenode.rpc.HeartbeatRequest)
-    HeartbeatRequestOrBuilder {
+        HeartbeatRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use HeartbeatRequest.newBuilder() to construct.
   private HeartbeatRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
       internalGetFieldAccessorTable() {
     return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            HeartbeatRequest.class, Builder.class);
+            HeartbeatRequest.class, HeartbeatRequest.Builder.class);
   }
 
   public static final int IP_FIELD_NUMBER = 1;
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.shawnliang.github.dfs.namenode.rpc.HeartbeatRequest)
-      HeartbeatRequestOrBuilder {
+          HeartbeatRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatRequest_descriptor;
@@ -337,7 +337,7 @@ private static final long serialVersionUID = 0L;
         internalGetFieldAccessorTable() {
       return NameNodeRpcModel.internal_static_com_shawnliang_github_dfs_namenode_rpc_HeartbeatRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              HeartbeatRequest.class, Builder.class);
+              HeartbeatRequest.class, HeartbeatRequest.Builder.class);
     }
 
     // Construct using com.shawnliang.github.dfs.namenode.rpc.model.HeartbeatRequest.newBuilder()

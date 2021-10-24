@@ -22,19 +22,22 @@ public final class NameNodeServer {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\027NameNodeRpcServer.proto\022&com.shawnlian" +
       "g.github.dfs.namenode.rpc\032\026NameNodeRpcMo" +
-      "del.proto2\223\002\n\017NameNodeService\022}\n\010registe" +
+      "del.proto2\211\003\n\017NameNodeService\022}\n\010registe" +
       "r\0227.com.shawnliang.github.dfs.namenode.r" +
       "pc.RegisterRequest\0328.com.shawnliang.gith" +
       "ub.dfs.namenode.rpc.RegisterResponse\022\200\001\n" +
       "\theartbeat\0228.com.shawnliang.github.dfs.n" +
       "amenode.rpc.HeartbeatRequest\0329.com.shawn" +
       "liang.github.dfs.namenode.rpc.HeartbeatR" +
-      "esponseBB\n.com.shawnliang.github.dfs.nam" +
-      "enode.rpc.serviceB\016NameNodeServerP\001b\006pro" +
-      "to3"
+      "esponse\022t\n\005mkdir\0224.com.shawnliang.github" +
+      ".dfs.namenode.rpc.MkdirRequest\0325.com.sha" +
+      "wnliang.github.dfs.namenode.rpc.MkdirRes" +
+      "ponseBB\n.com.shawnliang.github.dfs.namen" +
+      "ode.rpc.serviceB\016NameNodeServerP\001b\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
