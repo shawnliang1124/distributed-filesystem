@@ -24,7 +24,7 @@ public class FSDirectory {
     }
 
     /**
-     * 对文件目录树递归查找目录
+     * 查询文件目录
      * @param dir
      * @param path
      * @return
@@ -42,11 +42,6 @@ public class FSDirectory {
 
                 if((childDir.getPath().equals(path))) {
                     return childDir;
-                }
-
-                resultDir = findDirectory(childDir, path);
-                if(resultDir != null) {
-                    return resultDir;
                 }
             }
         }
@@ -71,7 +66,7 @@ public class FSDirectory {
             INodeDirectory parent = dirTree;
 
             for(String splitedPath : pathes) {
-                if(splitedPath.trim().equals("")) {
+                if("".equals(splitedPath.trim())) {
                     continue;
                 }
 
@@ -83,7 +78,20 @@ public class FSDirectory {
 
                 INodeDirectory child = new INodeDirectory(splitedPath);
                 parent.addChild(child);
+                parent = child;
             }
+        }
+
+        printDirTree(dirTree, "");
+    }
+
+    private void printDirTree(INodeDirectory dirTree, String blank) {
+        if(dirTree.getChildren().size() == 0) {
+            return;
+        }
+        for(INode dir : dirTree.getChildren()) {
+            System.out.println(blank + ((INodeDirectory) dir).getPath());
+            printDirTree((INodeDirectory) dir, blank + " ");
         }
     }
 
